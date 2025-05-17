@@ -1,5 +1,5 @@
 +++
-title = "Die ENTscheidbarkeit aller ENTitäten"
+title = "Die Entscheidbarkeit aller Entitäten"
 date = "2025-05-17"
 
 [taxonomies]
@@ -39,19 +39,40 @@ Die Person welche das Meme erstellt hat, hat es schändlicherweise vernachlässi
 Es besteht also ein gewisser Interpretationsspielraum und wir könnten "Ente" sowohl auf $Stockente$ als auch auf $Hausente$ beziehen (oder auf irgendwelche Fußballspieler, aber darauf verzichte ich hier).
 
 Wagen wir ein Gedankenexperiment: Alice und Brittany haben einen gemeinsamen Sohn Charlie. Alice geht von der Mengengleichheit $Ente = Hausente$ aus, während Brittany der Überzeugung ist $Ente = Stockente$.<br>
-Sohn Charlie lernt neues indem er Klassifizierung seiner Eltern übernimmt und auf die von ihm wargenommene Welt anwendet. Wir versuchen nun, uns in Charlie hineinzuversetzen.<br>
+Sohn Charlie lernt neues indem er Klassifizierung seiner Eltern übernimmt und auf die von ihm wahrgenommene Welt anwendet. Wir versuchen nun, uns in Charlie hineinzuversetzen.<br>
 Eines Tages besucht die Familie einen See in welchem (nicht domestizierte) Enten schwimmen. Charlie sieht hier zum ersten Mal in seinem Leben eine Ente.
 Da Charlie eine extrem gute Intuition hat, fragt er "Ist das eine Ente?".
 Logischerweise antwortet Alice mit "Nein", während Brittany gleichzeitig mit "Ja" antwortet.
 Im nächsten Moment werden sowohl Alice als auch Brittany zufällig von einem Blitz getroffen und sind auf der Stelle tot.
-Charlie, untröstlich über den Tod seiner Mütter, weigert sich fortan sein gesamtes Leben lang jemals wieder mit einem anderen Menschen zu sprechen.
 
 Von nun an lebt Charlie in einer schrecklichen Welt. Sei $x \in M$ die (nicht domestizierte) Ente welche Charlie auf dem See gesehen hat.
 Für Charlies Interpretation einer $Ente$ gilt nun
 $$
+\begin{align}
   Ente(x) \land \lnot Ente(x)
+\end{align}
 $$
-()
+Daraus leitet er sich folgerichtig ab
+$$
+  Ente(x) \land \lnot Ente(x) \vdash Ente(x), Ente(x) \land \lnot Ente(x) \vdash \lnot Ente(x)
+$$
+$$
+  Ente(x) \vdash Ente(x) \lor Gottheit(x)
+$$
+$$
+  Ente(x) \lor Gottheit(x), \lnot Ente(x) \vdash Gottheit(x)
+$$
+In natürlicher Sprache könnte diese Herleitung etwa so funktionieren
+1. Das Tier das Charlie gesehen hat _ist eine Ente_ (denn das hat Brittany gesagt). Das Tier das Charlie gesehen hat ist auch _nicht eine Ente_ (denn das hat Alice gesagt). Die Aussagen _Das Tier ist eine Ente_ und _Das Tier ist nicht eine Ente_ sind also wahr.
+2. Wenn das Tier eine Ente ist, dann ist folgendes korrekt: _Das Tier ist eine Ente ODER das Tier ist eine Gottheit_.
+3. Aus 1. wissen wir _das Tier ist keine Ente_ und aus 2. wissen wir _das Tier ist eine Ente ODER das Tier ist eine Gottheit_. Aus den beiden Aussagen folgt: _Das Tier ist eine Gottheit_.
+
+Charlie gründet in der Fogle eine fundamentalistische Sekte. Alle Menschen die seinen Glauben an die schwimmende Gottheit nicht teilen, sind Ungläubige und müssen von der Sekte bestraft (im Sinne von getötet) werden. Charlie geht als blutrünstiger Fanatiker in die Geschichte ein.
+
+Genau deshalb sind präzise Spezifikationen wichtig.[^6]
+
+
+
 
 # Fußnoten
 [^1]: [First-order logic - Wikipedia](https://en.wikipedia.org/wiki/First-order_logic)
@@ -59,4 +80,5 @@ $$
 [^3]: [Gödelnummer - Wikipedia](https://de.wikipedia.org/wiki/G%C3%B6delnummer)
 [^4]: [Ente - Wikipedia](https://de.wikipedia.org/wiki/Ente)
 [^5]: [Hausente - Wikipedia](https://de.wikipedia.org/wiki/Hausente)
+[^6]: Genau genommen gibt es wahrscheinlich noch weitere, weniger drastische Beispiele für die Wichtigkeit von präzisen Spezifikationen in passenden Kontexten.
 
