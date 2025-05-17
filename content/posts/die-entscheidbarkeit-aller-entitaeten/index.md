@@ -24,6 +24,7 @@ Als FOL[^1]-Formel könnte die Aussage wie folgt formalisiert werden:
 $$
   \forall x . Ente(x) \lor \lnot Ente(x)
 $$
+In natürlicher Sprache wäre dies etwa "Für jedes Objekt $x$ gilt: $x$ is eine Ente ODER $x$ ist keine Ente".<br>
 Es handelt sich hierbei um eine Instanz des Satzes des ausgeschlossenen Dritten, nach welchem jede beliebige Aussage (wie hier etwa $Ente(x)$) entweder wahr oder falsch sein muss.
 Tatsächlich aber waren sich aber auch schlaue Menschen nicht ganz einig, ob das so überhaupt stimmt[^2].
 Ob nun wirklich jedes Objekt im Universum eine Ente ist oder nicht, ist vielleicht gar nicht so eindeutig mit "Ja" zu beantworten.
