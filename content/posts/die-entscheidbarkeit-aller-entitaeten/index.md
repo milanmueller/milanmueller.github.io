@@ -53,16 +53,15 @@ $$
 $$
 Daraus leitet er sich folgerichtig ab
 $$
-  Ente(x) \land \lnot Ente(x) \vdash Ente(x), Ente(x) \land \lnot Ente(x) \vdash \lnot Ente(x)
-$$
-$$
-  Ente(x) \vdash Ente(x) \lor Gottheit(x)
-$$
-$$
-  Ente(x) \lor Gottheit(x), \lnot Ente(x) \vdash Gottheit(x)
+\begin{align}
+  Ente(x) \land \lnot Ente(x) &\vdash Ente(x) \\\\
+  Ente(x) \land \lnot Ente(x) &\vdash \lnot Ente(x) \\\\
+  Ente(x) &\vdash Ente(x) \lor Gottheit(x) \\\\
+  Ente(x) \lor Gottheit(x), \lnot Ente(x) &\vdash Gottheit(x)
+\end{align}
 $$
 In natürlicher Sprache könnte diese Herleitung etwa so funktionieren
-1. Das Tier, das Charlie gesehen hat, _ist eine Ente_ (denn das hat Brittany gesagt). Das Tier, das Charlie gesehen hat, ist auch _nicht eine Ente_ (denn das hat Alice gesagt). Die Aussagen _das Tier ist eine Ente_ und _das Tier ist nicht eine Ente_ sind also wahr.
+1. Das Tier, das Charlie gesehen hat, _ist eine Ente_ (denn das hat Brittany gesagt). Das Tier, das Charlie gesehen hat, ist auch _nicht eine Ente_ (denn das hat Alice gesagt). Die Aussagen _das Tier ist eine Ente_ und _das Tier ist nicht eine Ente_ sind also jeweils wahr.
 2. Wenn das Tier eine Ente ist, dann ist folgendes korrekt: _Das Tier ist eine Ente ODER das Tier ist eine Gottheit_.
 3. Aus 1. wissen wir _das Tier ist keine Ente_ und aus 2. wissen wir _das Tier ist eine Ente ODER das Tier ist eine Gottheit_. Aus den beiden Aussagen folgt: _Das Tier ist eine Gottheit_.
 
