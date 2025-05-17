@@ -32,10 +32,10 @@ Ob nun wirklich jedes Objekt im Univerum eine Ente ist oder nicht, ist vielleich
 Selbst wenn das Dritte nun nicht ausgeschlossen werden kann, könnte man meinen dass eine Ente ja recht wohldefiniert sein sollte.
 Sofern uns eine Definition der Ente bekannt ist welche für jedes beliebige Objekt $x$ die Entenfrage entscheidet, dann können wir dem humoristischen Aspekt des dargestellten Memes endlich auch ohne erkenntnistheoretische Gewissensbisse fröhnen.
 
-Wikipedia[^4] macht es natürlich wieder kompliziert und bietet gleich mehrere Interpretationen einer "Ente" an (darunter u.a. verschiedene "Entenvögel", Fahr- und Flugzeuge und einen Fußballspieler namens "Willi Lippens"). Bei dem im Meme abgebildeten Entenvogel handelt es sich, meiner absolut unqualifizierten Klassifizierung nach, wohl um eine "Hausente"[^5] welche wiederum eine Art Spezialisierung einer "Stockente" darstellt.
+Wikipedia[^3] macht es natürlich wieder kompliziert und bietet gleich mehrere Interpretationen einer "Ente" an (darunter u.a. verschiedene "Entenvögel", Fahr- und Flugzeuge und einen Fußballspieler namens "Willi Lippens"). Bei dem im Meme abgebildeten Entenvogel handelt es sich, meiner absolut unqualifizierten Klassifizierung nach, wohl um eine "Hausente"[^4] welche wiederum eine Art Spezialisierung einer "Stockente" darstellt.
 
 An diesem Punkt nimmt das Unheil aber bereits seinen Lauf. Betrachten wir die Mengen $Hausente \subseteq M$ und $Stockente \subseteq M$, so besteht eine Teilmengenrelation $Hausente \subsetneq Stockente$. Ein nicht domestizierte Ente $x$ läge in der Mengendifferenz $Stockende \setminus Hausente$.
-Die Person welche das Meme erstellt hat, hat es schändlicherweise vernachlässigt eine genaue Spezifikation einer Enter beizufügen.
+Die Person welche das Meme erstellt hat, hat es schändlicherweise vernachlässigt eine genaue Spezifikation einer Ente beizufügen.
 Es besteht also ein gewisser Interpretationsspielraum und wir könnten "Ente" sowohl auf $Stockente$ als auch auf $Hausente$ beziehen (oder auf irgendwelche Fußballspieler, aber darauf verzichte ich hier).
 
 Wagen wir ein Gedankenexperiment: Alice und Brittany haben einen gemeinsamen Sohn Charlie. Alice geht von der Mengengleichheit $Ente = Hausente$ aus, während Brittany der Überzeugung ist $Ente = Stockente$.<br>
@@ -69,7 +69,7 @@ In natürlicher Sprache könnte diese Herleitung etwa so funktionieren
 
 Charlie gründet in der Fogle eine fundamentalistische Sekte. Alle Menschen die seinen Glauben an die schwimmende Gottheit nicht teilen, sind Ungläubige und müssen von der Sekte bestraft (im Sinne von getötet) werden. Charlie geht als blutrünstiger Fanatiker in die Geschichte ein.
 
-Genau deshalb sind präzise Spezifikationen wichtig.[^6]
+Genau deshalb sind präzise Spezifikationen wichtig.[^5]
 
 
 
@@ -77,8 +77,7 @@ Genau deshalb sind präzise Spezifikationen wichtig.[^6]
 # Fußnoten
 [^1]: [First-order logic - Wikipedia](https://en.wikipedia.org/wiki/First-order_logic)
 [^2]: [Brouwer-Hilbert controversy - Wikipedia](https://en.wikipedia.org/wiki/Brouwer%E2%80%93Hilbert_controversy)
-[^3]: [Gödelnummer - Wikipedia](https://de.wikipedia.org/wiki/G%C3%B6delnummer)
-[^4]: [Ente - Wikipedia](https://de.wikipedia.org/wiki/Ente)
-[^5]: [Hausente - Wikipedia](https://de.wikipedia.org/wiki/Hausente)
-[^6]: Genau genommen gibt es wahrscheinlich noch weitere, weniger drastische Beispiele für die Wichtigkeit von präzisen Spezifikationen in passenden Kontexten.
+[^3]: [Ente - Wikipedia](https://de.wikipedia.org/wiki/Ente)
+[^4]: [Hausente - Wikipedia](https://de.wikipedia.org/wiki/Hausente)
+[^5]: Genau genommen gibt es wahrscheinlich noch weitere, weniger drastische Beispiele für die Wichtigkeit von präzisen Spezifikationen in passenden Kontexten.
 
