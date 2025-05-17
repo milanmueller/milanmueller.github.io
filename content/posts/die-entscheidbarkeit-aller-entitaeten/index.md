@@ -17,12 +17,14 @@ _Zweiter Disclaimer: Dieser Text ist ein erster Entwurf._
 # Einleitung
 Man betrachte das nachfolgende Meme:
 
-<img src="./duck.jpg" alt="Every signle thing that exists in this infinite universe is either a duck or not a duck">
+<div style="display: block; margin-left: auto; margin-right: auto; width: 40%;">
+  <img src="./duck.jpg" alt="Every signle thing that exists in this infinite universe is either a duck or not a duck">
+</div>
 
 Auf den ersten Blick erscheint die Aussage offensichtlic wahr zu sein, schließlich gibt es ja nur zwei Möglichkeiten; Ente oder nicht Ente.
 Als FOL[^1]-Formel könnte die Aussage wie folgt formalisiert werden:
 $$
-  \forall(x) . Ente(x) \lor \lnot Ente(x)
+  \forall x . Ente(x) \lor \lnot Ente(x)
 $$
 Es handelt sich hierbei um eine Instanz des Satzes des ausgeschlossenen Dritten, nach welchem jede beliebige Aussage (wie hier etwa $Ente(x)$) entweder wahr oder falsch sein muss.
 Tatsächlich aber waren sich aber auch schlaue Menschen nicht ganz einig ob das so überhaupt stimmt[^2].
