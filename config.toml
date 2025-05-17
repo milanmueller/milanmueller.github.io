@@ -1,6 +1,9 @@
 # The URL the site will be built for
 base_url = "https://milanmueller.de"
 
+theme = "apollo"
+taxonomies = [{ name = "tags" }]
+
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
 
@@ -14,3 +17,22 @@ highlight_code = true
 
 [extra]
 # Put all your custom variables here
+theme = "toggle"
+socials = [
+  { name = "github", url = "https://github.com/milanmueller", icon="github" },
+]
+menu = [
+  { name = "~/", url = "/", weight = 1 },
+  { name = "~/posts", url = "/posts", weight = 2 },
+  # { name = "~/projects", url = "/projects", weight = 3 },
+  { name = "~/about", url = "/about", weight = 4 }
+]
+mathjax = true
+mathjax_dollar_inline_enable = true
+
+[search]
+include_title = true
+include_description = true
+include_path = true
+include_context = true
+index_format = "elasticlunr_json"
