@@ -92,6 +92,8 @@ Wir erweitern also unsere Definition der (normalen) Ente um $\lnot Gedankenlesen
 
 Im Jahre 2142 findet die Menschheit einen weiteren Planeten - "Dennis 2". Hier findet sich schon wieder eine neue Spezies die unseren irdischen Enten sehr ähnlich ist (in dem Sinne, dass alle Konjunkte bejaht werden können).
 Nach einigen Untersuchungen stellen wir dann auch erleichtert fest: Die neue Spezies kann keine Gedanken lesen. Wir haben nun also auf "Dennis 2" tatsächlich Enten gefunden.
+Welch freudiges Ereignis.
+
 Aber dann kommt der (völlig unvorhersehbare) Plottwist: Die Enten auf "Dennis 2" können zwar keine Gedanken lesen, aber sie können Teleportieren.
 Auch hier fällen wir wieder die Entscheidung: Eine normale Ente sollte nicht teleportieren können.
 Wir erweitern also erneut unsere Konjunktsammlung um $\lnot Teleportieren(x)$.
