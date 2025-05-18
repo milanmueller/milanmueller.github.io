@@ -82,6 +82,13 @@ $$
                 &\dots \\\\
 \end{align*}
 $$
+In natürlicher Sprache etwa:<br>
+Objekt $x$ ist eine Stockente wenn
+* $x$ ein Entevogel ist UND
+* $x$ eine Länge von 58cm oder weniger hat UND
+* $x$ eine Flügelspannweite von 95cm oder weniger hat UND
+* ... (weitere Attribute von Stockenten)
+
 Wir nehmen hier an, dass diese Definition tatsächlich so genau ist, dass für jedes Tier auf der Erde entschieden werden kann, ob es sich nun um eine Ente handelt oder nicht.
 
 Ein weiteres Gedankenexperiment: Im Jahr 2042 entdeckt die Menschheit einen erdähnlichen Planeten (nennen wir ihn "Dennis") und kann diesen sogar bereisen. Auf dem Planeten findet sich eine Lebensform bei der alle Teildefinitionen der obigen Konjunktion zutreffen. Folglich haben wir auf dem neu entdeckten Planeten "Dennis" Enten gefunden. Welch freudiges Ereignis.

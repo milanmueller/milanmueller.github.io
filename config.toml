@@ -19,7 +19,7 @@ highlight_code = true
 # Put all your custom variables here
 theme = "toggle"
 socials = [
-  { name = "github", url = "https://github.com/milanmueller", icon="github" },
+  { name = "github", url = "https://github.com/milanmueller/", icon="github" },
 ]
 menu = [
   { name = "~/", url = "/", weight = 1 },
