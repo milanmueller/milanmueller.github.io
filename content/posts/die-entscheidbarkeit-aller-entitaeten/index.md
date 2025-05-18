@@ -101,13 +101,27 @@ Im Jahre 2142 findet die Menschheit einen weiteren Planeten - "Dennis 2". Hier f
 Nach einigen Untersuchungen stellen wir dann auch erleichtert fest: Die neue Spezies kann keine Gedanken lesen. Wir haben nun also auf "Dennis 2" tatsächlich Enten gefunden.
 Welch freudiges Ereignis.
 
-Aber dann kommt der (völlig unvorhersehbare) Plottwist: Die Enten auf "Dennis 2" können zwar keine Gedanken lesen, aber sie können Teleportieren.
+Aber dann kommt der Plottwist: Die Enten auf "Dennis 2" können zwar keine Gedanken lesen, aber sie können Teleportieren.
 Auch hier fällen wir wieder die Entscheidung: Eine normale Ente sollte nicht teleportieren können.
 Wir erweitern also erneut unsere Konjunktsammlung um $\lnot Teleportieren(x)$.
 
 Man kann sich vielleicht denken wie es weiter geht: Wir finden immer neue Planeten mit immer neuen entenartigen Geschöpfen, jeweils mit einer neuen bis dato nicht berücksichtigten Eigenschaft.
+Bis wir den jeweils nächsten Planeten finden, erschien uns unsere Definition ausreichend um Enten eindeutig klassifizieren zu können. Bei den nächsten Superenten merken wir dann aber, dass unsere Definition zu ungenau war.
+
+Halten wir nun einen Moment fest, zu dem wir noch überzeugt sind, dass unsere Entendefinition gut genug ist, um Ente von Nicht-Ente zu unterscheiden.
+In Kürze werden wir eine weitere Nicht-Ente finden die wir bislang noch nicht kennen. z.B. die "Wasser in Wein verwandelnde Ente".<br>
+Die "Wasser in Wein verwandelnde Ente" existiert zum aktuellen Zeitpunkt bereits, wir kennen sie aber noch nicht. Hätten wir sie gekannt, dann wäre uns vielleicht klar, dass sie keine Ente sein kann.
+
+Was ist nun die "Wasser in Wein verwandelnde Ente"? Nach unserer aktuellen Definition ist sie eine Ente, aber wenn wir sie bereits kennen würden, wären wir uns sicher dass sie keine Ente ist.
+Tragischerweise kann unsere Entendefinition nie gut genug sein. Wir sind zu der Annahme verdammt, dass es irgendwo da drausen Wesen gibt, die zwar irgendwie keine Ente sind, die aber bis jetzt unter unsere Definition einer Ente fallen. Und das schlimmste ist: Wir wissen noch nicht einmal warum.
+
 Ganz entscheidend ist hier auch, dass im Meme weiter oben vom _unendlichen_ Universum die Rede ist. In einem endlichen Universum könnte man argumentieren, dass es ein Konjunkt gibt, das mächtig genug ist, um unsere Enten auf der Erde von den extraterrestrischen Enten zu unterscheiden.
-Wenn wir aber davon ausgehen, dass unser Universum unendlich groß ist, dann müssen wir auch davon ausgehen, dass das Gedankenexperiment nie endet und wir somit keine endliche Definition einer Ente liefern können.
+Also das wir nur lang genug nach neuen Nicht-Enten suchen müssen bis wir alle gefunden haben.
+Wenn wir aber davon ausgehen, dass unser Universum unendlich groß ist, dann wird unser Gedankenexperiment nie enden und unsere Entendefinition wird niemals gut genug sein, um die Entenfrage auch für alle noch unbekannten Lebensformen zu entscheiden.
+
+Die einzige Logische Schlussfolgerung ist also Resignation.<br>
+Wenn die Außerirdischen zum ersten mal mit uns sprechen, dann werden Sie uns fragen "was ist eine Ente?"<br>
+Zur Antwort werden wir verzweifelt zusammenbrechen. "Wir wissen es nicht! Wir können es niemals wissen! Existens ist Schmerz!" werden wir wehklagen.
 
 # Fazit
 Aus Sicht des Formalismus hätte ich mir die Gedankenexperimente sparen können (die Frage, ob das nicht ohnehin besser gewesen wäre, sei den Lesenden überlassen). 
@@ -117,7 +131,11 @@ Was der obige Nonsens aus meiner Sicht aber unterstreicht, ist die Sinnlosigkeit
 Im Falle der Ente gibt es kaum Kontroversen um die Definition derselben (und wenn doch, ist mir dieses Highlight der menschlichen Streitsucht wohl entgangen).
 Betrachtet man jedoch einen Begriff der auch nur im entferntesten politisierbar ist, dann findet man mit Leichtigkeit ausschweifende Debatten, die allein aufgrund uneinheitlicher Auffassung der Semantik des Begriffs zur Destruktivität (im Sinne von Abwesenheit von Konstruktivität (im Sinne von "auf einen gemeinsamen Nenner kommen")) verdammt sind.
 
-Wenn sich aber formale Logik nicht auf alltägliche Fragen anwenden lässt, wie können wir überhaupt an eine "Wahrheit" glauben? Hier ein Vorschlag: Wir glauben einfach an irgendeinen Gott und denken uns dazu noch ein Ethikkonzept aus, durch welches wir dann all unsere Handlungen als legitimiert betrachten. Als Vorschlag für einen solchen Gott möchte ich zusätzlich noch die eine Ente von dem einen Ententeich in den Ring werfen.
+Wenn sich aber formale Logik nicht auf alltägliche Fragen anwenden lässt, wie können wir überhaupt an eine "Wahrheit" glauben? Hier ein Vorschlag: Wir glauben einfach an irgendeinen Gott und denken uns dazu noch ein Ethikkonzept aus, durch welches wir dann all unsere Handlungen als legitimiert betrachten. Als Vorschlag für einen solchen Gott möchte ich zusätzlich noch die Ente vom Ententeich in den Ring werfen.
+
+Ente gut alles gut.
+
+---
 
 # Fußnoten / Quellen
 [^1]: [First-order logic - Wikipedia](https://en.wikipedia.org/wiki/First-order_logic)
