@@ -116,7 +116,7 @@ Was ist nun die "Wasser in Wein verwandelnde Ente"? Nach unserer aktuellen Defin
 Tragischerweise kann unsere Entendefinition nie gut genug sein. Wir sind zu der Annahme verdammt, dass es irgendwo da drausen Wesen gibt, die zwar irgendwie keine Ente sind, die aber bis jetzt unter unsere Definition einer Ente fallen. Und das schlimmste ist: Wir wissen noch nicht einmal warum.
 
 Ganz entscheidend ist hier auch, dass im Meme weiter oben vom _unendlichen_ Universum die Rede ist. In einem endlichen Universum könnte man argumentieren, dass es ein Konjunkt gibt, das mächtig genug ist, um unsere Enten auf der Erde von den extraterrestrischen Enten zu unterscheiden.
-Also das wir nur lang genug nach neuen Nicht-Enten suchen müssen bis wir alle gefunden haben.
+Also dass wir nur lang genug nach neuen Nicht-Enten suchen müssen bis wir alle gefunden haben.
 Wenn wir aber davon ausgehen, dass unser Universum unendlich groß ist, dann wird unser Gedankenexperiment nie enden und unsere Entendefinition wird niemals gut genug sein, um die Entenfrage auch für alle noch unbekannten Lebensformen zu entscheiden.
 
 Die einzige Logische Schlussfolgerung ist also Resignation.<br>
