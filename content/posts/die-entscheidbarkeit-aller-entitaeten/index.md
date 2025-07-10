@@ -30,7 +30,7 @@ Tatsächlich aber waren sich aber auch schlaue Menschen nicht ganz einig, ob das
 Ob nun wirklich jedes Objekt im Universum eine Ente ist oder nicht, ist vielleicht gar nicht so eindeutig mit "Ja" zu beantworten.
 
 # Eine Frage der Interpretation
-Selbst wenn das Dritte nicht ausgeschlossen werden kann, könnte man ja meinen, dass eine Ente ja recht wohldefiniert sein sollte.
+Selbst wenn das Dritte nicht ausgeschlossen werden kann, könnte man argumentieren, dass eine Ente ja recht wohldefiniert sein sollte.
 Sofern uns eine Definition der Ente bekannt ist welche für jedes beliebige Objekt $x$ die Entenfrage entscheidet, dann können wir dem humoristischen Aspekt des dargestellten Memes endlich auch ohne erkenntnistheoretische Gewissensbisse frönen.
 
 Wikipedia[^3] macht es natürlich wieder kompliziert und bietet gleich mehrere Interpretationen einer "Ente" an (darunter u.a. verschiedene "Entenvögel", Fahr- und Flugzeuge und einen Fußballspieler namens "Willi Lippens"). Bei dem im Meme abgebildeten Entenvogel handelt es sich, meiner absolut unqualifizierten Klassifizierung nach, wohl um eine "Hausente"[^4] welche wiederum eine Art Spezialisierung einer "Stockente" darstellt.
