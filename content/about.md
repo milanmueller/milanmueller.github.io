@@ -4,12 +4,15 @@ path = "about"
 +++
 
 # About Me
-My name is Milan Müller (as one might have guessed from the domain name ^^). 
+My name is Milan Müller - as one might have guessed from the domain name ^^. 
+
 I am (as of 08/2025) studying computer science (M.Sc.) at [Albert-Ludwigs-Universität Freiburg](https://uni-freiburg.de/) (Germany), while also working in IT (currently in systems administation/network stuff).
 
 On this website I write about personal interest (which mostly concern computers in some way) or just random things I need to put into a keyboard so my mind can move onto other things.
 
-[Posts](/posts/) might be in English or German.
+[Posts](/posts/) might be in English (when I'm writing about tech stuff) or German (for my random hobbyist psuedo-philisophy hot takes).
+
+I really like brackets, in case you couldn't already tell.
 
 ---
 
