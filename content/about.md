@@ -3,26 +3,15 @@ title = "About"
 path = "about"
 +++
 
-Things I like:
-* Computers
-* Computers when they run [NixOS](https://github.com/milanmueller/nixos-config)
+# About Me
+My name is Milan Müller (as one might have guessed from the domain name ^^). 
+I am (as of 08/2025) studying computer science (M.Sc.) at [Albert-Ludwigs-Universität Freiburg](https://uni-freiburg.de/) (Germany), while also working in IT (currently in systems administation/network stuff).
 
-Things I dislike:
-* Computers
-* Computers when they're made and programmed by Apple[^1]
-* Computers when they're programmed by microsoft
+On this website I write about personal interest (which mostly concern computers in some way) or just random things I need to put into a keyboard so my mind can move onto other things.
 
-That's all there is to know about me.
+[Posts](/posts/) might be in English or German.
 
 ---
 
-The Site is built with [Zola](https://www.getzola.org/), using the [Apollo Theme](https://github.com/not-matthias/apollo), because modern web bad[^2].
+The Site is built with [Zola](https://www.getzola.org/), using the [Apollo Theme](https://github.com/not-matthias/apollo), because modern web bad ("_modern_" as in everything after about 2010).
 The source is available on [Github](https://github.com/milanmueller/milanmueller.github.io).
-
----
-
-[^1] There is a strong argument to be made for apple hardware being "good" in a number of ways.
-Specifically the efficiency of their arm cpus and overall build quality are for sure compelling attributes that I can aknowledge.
-What I dislike about apple products is their pricing w.r.t. ram and storage configuration the terrible os and apple's general anti consumer and anti power user stance on virtually everything.
-
-[^2] "modern" as in everything after about 2010.
