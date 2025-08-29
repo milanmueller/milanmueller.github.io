@@ -1,5 +1,5 @@
 +++
-title = "My Haskell Journey - Part 1"
+title = "My Haskell Journey, Chapter 1 - What the hell is a monad?"
 date = "2025-08-29"
 
 [taxonomies]
@@ -10,7 +10,7 @@ repo_view = true
 comment = true
 +++
 
-# My Haskell Journey - Part 1
+# My Haskell Journey, Chapter 1 - What the hell is a monad?
 _Note: This is not a tutorial, it is some kind of progress report about my personal experience with trying to learn the programming language [Haskell](https://www.haskell.org/)._
 
 _Note: This is a first version of the post without any proofreading. I will go over it again and might do significant amounts of rewriting. Once I'm done, I will remove this second Note._
@@ -39,28 +39,31 @@ I want to implement all of this on a relatively low level. Of course I could use
 My language of choice is going to be Haskell, since I've already learned some Haskell at uni and it seems to be quite representative of the "functional experience".
 
 ### Where I'm coming from
+While I'm not a first-time Haskell type of beginner, I'm definetely a beginner in Haskell programming and functional programming in general.
+To be more precise, here are two statements of my current understanding of Haskell:
 * I can understand the type signature of the bind operator `>>=` when I look at it.
 * Five minutes later, I again have no clue what a monad is supposed to be.
 
-One could say that I have heard of some concepts from functional programming but I have solid no intuition for when and how I should use them.
-
 ### Personal Goals
-* I want to gain an intuition for what monads are and what they can be used for (I'm just using monads as a representative example of concepts in Haskell that I want to learn).
+* I want to put some concepts I've heard (like monads) of into practice within a real project.
 * I finally want to get around to actually following through on one of my many ideas for personal projects.
-* I want to "properly" write a piece of software. Even though my goal is not to write a production ready postgress replacement, I would still like to do things as right as I can. The process of creating this thing should be as close to "real world" programming as possible.
+* I want to "properly" write a piece of software. Even though my goal is not to write a production ready postgress replacement, I would still like to do things as right as I can. The process of creating this thing should be as close to "real world" programming as possible. \
+  Little spoiler: I'm going to go with a "get hands dirty, cleanup later" kind of approach here.
+  While I do want to do things properly, I will come back to testing and documentation later and focus on actually writing some code first.
 
-### "Methodology"
+### Methodology
 This is a personal blog that no one other than me is ever going to read, so choosing "methodology" as the `h3` heading here seems really overkill. \
 Still, I want to to be transparent about how I am approaching this. Especially in the era of "vibe coding".
 
 * I do not have llm-based autocomplete in my editor. The Haskell language server is all I'm using on that front. My editor of choice is [Helix](https://helix-editor.com/).
-* I will ask ChatGPT or gemini cli whenever I get stuck with something for a longer period of time. I do think that there is something to gain from this approach even if it sometimes means to just do whatever an llm tells you.
+* I will ask ChatGPT or gemini cli whenever I get stuck with something for a longer period of time. I do think that there is something to gain from this approach even if it sometimes means to just do whatever an llm tells you. I can still use the generated stuff to have something that works and use it to learn why and how to then improve upon it.
 
 I made the project public on [Github](https://github.com/milanmueller/tasdb) so that if anyone ever reads this, they could have a look at the source.
 
 ## Getting started
-When I was younger, I tried to learn to draw. One of the hardest things about that, I felt like, was actually getting started with a drawing.
+When I was younger, I tried to learn to draw. One of the hardest things about that, I felt like, was the initial hurdle of getting started with a drawing.
 It felt like if I placed the first line of the initial sketch at the wrong position, the entire piece was doomed to be a complete failure.
+Maybe this is a form of procrastination, maybe it is a form of perfectionism, or maybe both.
 
 When I tried to get into some other project with languages I feel like I'm supposed to know (like Python, Java or to some degree C++ in my case), I would struggle with a similar thing.
 Maybe this could be attributed to some ideas from oop, but I always feel like unless I find the perfect representation, class hierarchy, uml diagram or whatever right away, the project was going to end in an utter mess.
@@ -104,17 +107,11 @@ _Note: I've omitted the timestamps here for simplicity._
 
 This state is legal w.r.t. our defined Haskell types, but it is a state that does not make sense, since _foo_ is supposed to collect boolean values, not integer values. The type checker will not save us from such a state unfortunately.
 
-Maybe there exists some kind of Haskell magic to prevent such states just through the type system, but if so, I am not aware of it.
+Maybe there exists some kind of Haskell magic to prevent such states just through the type system, but if so, I am not aware of it (yet).
 
-From what I've heard, the `Either` type is a popular way of encapsulating potentially erronous states, so I elect to use it to differenciate between sane and insane states.
+From what I've heard, the `Either` type is a decent way of encapsulating potentially erronous states, so I elect to use that to differenciate between sane and insane states.
 
-Another predefined type that might be useful to us here is the `State` type, since we are dealing with, well, some kind of state.
-
-Using `Either` and `State` gives raise to the following monad stack (at least I hope that's what this thing is called):
-``` Haskell
-type DBMonad = StateT DBState (Either DBError)
-```
-I'm using the `mtl` package here to stack these moands. I also had gemini create some sensible Error types for me which look like this:
+I had gemini create some sensible Error types for me which look like this:
 ``` Haskell
 data DBError
   = MetricNotFound MetricName
@@ -124,14 +121,20 @@ data DBError
   | InvalidInput String
 ```
 
-I would love to talk more about monads but, as I wrote above, I am nowhere near to knowing things like monads well enough to really say a lot about them.
-Learning when and how to use a monad was one of my goals for this project.
+Another predefined type that might be useful to us here is the `State` type, since we are dealing with, well, some kind of state.
 
-What I do believe to know is that this is one of the use cases of monads, so I'm just trying to use them and see where that's going to lead me :)
+Using `Either` and `State` gives raise to the following monad stack (at least I hope that's what this thing is called):
+``` Haskell
+type DBMonad = StateT DBState (Either DBError)
+```
+I'm using the `mtl` package here to stack these moands, though I have to say I'm not sure if this could also be achieved with `transformers`.
+I might come back to this question at some point, to get a deeper understanding of monads and the workings of their stacking ^^.
+
+What I do believe to know is that this scenario (state and errors) is one of the use cases of monads, so I'm just trying to use them and see where that's going to lead me :)
 
 ## State is evil - so lets change it
 Again with the help of gemini (since I'm just not used to monads enough), I created some functions to modify my little state representation.
-The most interesting one is probably this one
+The most interesting one is probably `addDataPoint`:
 ```Haskell
 addDataPoint :: MetricName -> MetricValue -> UTCTime -> DBMonad ()
 addDataPoint name val timestamp = do
@@ -145,13 +148,15 @@ addDataPoint name val timestamp = do
           newPoints = newPoint : oldPoints
       Control.Monad.State.put $ s{values = Map.insert name newPoints (values s)}
 ```
-I think what `getMetricType name` does is quite self explanatory (it checks if `name` is an existing metric and returns it's type if so).
-What I would again like to point out though is how we don't have to check whether it returns an error since the potential error is encoded in our monad stack `DBMonad`, similarly to how we might be able to use the `?` operator in rust. \
-`validateType` then checks if the value of our new data type is compatible with the respective metric's type.
+The purpose of the used helper function `getMetricType name` is quite self explanatory - it checks if `name` is an existing metric and returns it's type if so.
 
-In addition, there are also two other functions which I will not show here, but they are implemented quite similarly:
+What I would like to point out here, is how we don't have to check whether it returns an error since the potential error is encoded in our monad stack `DBMonad`, similarly to how we might be able to use the `?` operator in rust.
+
+The other helper function `validateType` checks if the value of our new data type is compatible with the respective metric's type and might also generate a fitting error, if not.
+
+In addition to `addDataPoint`, there are also two other functions which I will not show here, but they are implemented in a similar manner:
 * `addMetric` - to define new metrics. This one might produce an error if a metric already exists.
-* `deleteMetric` - to delete metrics. It will produce an error if the given metric does not exist, since I think some kind of idempotent deletion, if desired, should be "opt in" at a higher level.
+* `deleteMetric` - to delete metrics. It will produce an error if the given metric does not exist, since some kind of idempotent deletion, if desired, should probably be "opt in" at a higher level.
 
 ## Handling user input
 We want to support user interaction. For now through a little cli tool.
@@ -160,7 +165,8 @@ Since state only lives in memory until we do proper databasing, I decided to cre
 This turned out a bit challanging for me and after some attempts with using a specialized library for cli argument parsing, I decided to use [Parsec](https://hackage.haskell.org/package/parsec) for parsing my repl's input and then translating that into calls to my previously created functions.
 
 Maybe in the future I will go back to this step and do the parsing myself, since I think this might be a nice learning challenge.
-I also think Parsec, being a _monadic_ parsing library, is a bit overkill and using an applicative parser would be sufficient for what I'm doing here.
+
+Another though of mine is that Parsec, being a _monadic_ parsing library, might be a bit overkill and using an _applicative_ parser would be sufficient for this use case.
 For now however, I wanted something that _just works_ and Parsec did not disappoint me.
 
 We want to be able to parse two commands for now:
@@ -179,9 +185,9 @@ To represent these two commands, I came up with the following little grammar for
 I hope it's clear how this grammar can be used to build our two commands, even though it probably can not hold up to any standards of formal correctness.
 Our enum type should be defineable like `metric add "colors" enum ["red", "green", "blue"]`, that's what the weird pseudo-regex for `<type>` is supposed to encode.
 
-Of course I also tried to design this little grammar in a way such that it could be extended in the future.
+Of course I also tried to design this little grammar in a way such that it could easily be extended in the future.
 
-In Haskell, the AST we want to parse into is again really straight forward and follows directly from the grammar above:
+In Haskell, the AST we want to parse into, follows directly from the grammar above:
 ``` Haskell
 data Val = VStr String | VInt Int | VBool Bool 
 data Type = TInt | TBool | TEnum [String]
@@ -199,11 +205,9 @@ lexer = makeTokenParser style where
     , reservedOpNames = ["[", "]", ","]
     }
 ```
-I should note that none of what I'm doing here is supposed to be best practice. I'm using parsec for the first time and I like to use a "try until it works" approach when learning new things.
-So maybe what I'm doing here is genius, maybe it's stupid, maybe something in between. 
-Time will tell.
+I should note that none of what I'm doing here is supposed to be best practice. I'm using Parsec for the first time and I like to use a "try until it works" approach when learning new things.
 
-For each type of our AST, we create a parsing function. I won't include all of them here (the complete source is on [github](https://github.com/milanmueller/tasdb)), but as an example, here is the parser for the types:
+For each type of our AST, we create a parsing function. I won't include all of them here (the complete source is on [github](https://github.com/milanmueller/tasdb)), but as an example, here is the parser for our metric types (this one should be able to parse `int`, `bool` or custom enums `enum ["option1", "option2", "option3"]`):
 ``` Haskell
 parseType :: Parser Type
 parseType = parseIntType <|> parseBoolType <|> parseEnumType
@@ -215,8 +219,8 @@ parseType = parseIntType <|> parseBoolType <|> parseEnumType
       enumValues <- brackets lexer (commaSep1 lexer (stringLiteral lexer))
       return $ TEnum enumValues
 ```
-Coming from imperative programming, this does look quite complex at first. But once I started to understand what was happening, I started to really like how concise these definitions are. \
-There are no `if`s here, no `else if`s, no "_darn it, in this language it's `elif` not `else if`_"'s here, which matches the more "stateless" way one would think about a grammar like the one above.
+Coming from imperative programming, this function does look quite complex to me at first. But once I started to understand what was happening, I started to really like how concise these definitions are. \
+There are no `if`s here, no `else if`s, no "_darn it, in this language it's `elif` not `else if`_"'s here, which I feel like matches the more "stateless" way one would think about a grammar like the one above.
 
 Remember what I said earlier about _monadic_ parser combinators being overkill for this project? Well `parseType` is the one parsing function in my project that actually uses the bind operator (hidden in do notation). All other parsing functions only use `>>`. \
 So maybe I was wrong earlier? Or maybe I'm wrong for using monad stuff when it's not neccessary and this could be done in a purely applicative style? \
@@ -226,7 +230,7 @@ Well maybe at some point I'll be able to tell ^^.
 Going from the AST we've now parsed to calling the functions that modify our state is what I will refer to as _monkey pattern matching_ where we can just give a decently trained ape the type signature of our function and the monkey will then do the pattern matching for us.
 One might also argue that instead of apes we could use llms for such tasks.
 
-Since my cognitive ability is essentially equivalent to one of those "reasoning models" being used with a monkey brain for token prediction, I decided to implement functions like these myself:
+Since my cognitive ability is essentially equivalent to one of those "reasoning model" thingys being used on top of a monkey's brain for token prediction, I decided to implement functions like these myself:
 ``` Haskell
 runParserType :: Type -> MetricType
 runParserType Parser.TInt = Core.TInt
@@ -295,11 +299,11 @@ In addition, I am a lot more confident in that my little program behaves as inte
 
 ## What's next
 Of course there is a lot of incremental improvements to be made to our little repl tool.
-More datatypes, input history (with up and down keys like in bash) and prettier printing are the first few that I can come up with on the stop.
+More datatypes, input history (with up and down keys like in bash) and prettier printing are the first few that I can come up with on the spot.
 
 However, this project was supposed to be about a database and we are not even writing anything to the disk yet - time to change that.
 
 In the next part, I think I'm going to go back to the drawing board and think a little bit about how I want data to be stored.
 Designing a storage backend for our database is obviously one of the most critical and challenging parts of this project, so let's look at that next.
 
-As of writing this the most recent commit on [github](https://github.com/milanmueller/tasdb/commit/0110a09e8826029fa7e8629dcd1453dd54fab2c2) is 0110a09. Code show here might look very different on the repo at a future point in time.
+As of writing this, the most recent commit on [github](https://github.com/milanmueller/tasdb/commit/0110a09e8826029fa7e8629dcd1453dd54fab2c2) has the hash `0110a09`. Code shown here might look very different on the repo at a future point in time.
