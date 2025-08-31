@@ -33,7 +33,10 @@
           default = pkgs.mkShell {
             # The Nix packages provided in the environment
             # Add any you need here
-            packages = with pkgs; [ zola ];
+            packages = with pkgs; [
+              zola
+              codebook # for spellchecking
+            ];
 
             # Set any environment variables for your dev shell
             env = { };

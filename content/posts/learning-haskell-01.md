@@ -20,7 +20,7 @@ _Note: This is a first version of the post without any proofreading. I will go o
 ### The Motivation
 In some of the university lectures I had the chance to attend, I was introduced to the idea of functional programming.
 While being less intuitive than imperative languages, I found programming in a functional way to be quite satisfying compared to writing for loops all the time.
-Somehow the abstract way of thinking which functional programming neccessitates tickles similar parts of my brain as videos of hydraulic presses crushing stuff do.
+Somehow the abstract way of thinking which functional programming necessitates tickles similar parts of my brain as videos of hydraulic presses crushing stuff do.
 
 I have also been wanting to do a personal programming project for some time, so I figured I might combine that with my curiosity for functional programming and try to solve some more complex problems than the usual toy programs from university lectures (which is not to say that those were too easy, what I mean by _complexity_ here, is the size of the program and also its real world usability rather than whether they are hard or easy to solve.)
 
@@ -28,18 +28,18 @@ I have also been wanting to do a personal programming project for some time, so 
 Here's the goal: I want to implement a very simple kind of [Time series database](https://en.wikipedia.org/wiki/Time_series_database). \
 Now, calling what I'm planning to do a database might be a bit far fetched, so let's go with a more concrete description of my goal:
 * The user should be able to define _metrics_. A _metric_ is a tuple `(name, type)`, where `name` is the name of the metric and `type` is, well, a datatype like number, flag (boolean), or some custom "one of" (i.e. enum) type.
-  - I will not exaclty fix the available types now, maybe I discover some other interesting types to support in the future.
+  - I will not exactly fix the available types now, maybe I discover some other interesting types to support in the future.
 * The user should then be able to track these metrics, i.e., insert a concrete value for a defined metric alongside a timestamp.
 * The user should be able to fetch stored data for the metrics, optionally with applying some aggregation functions that are sensible w.r.t the respective datatype - this is probably where the bulk of the work is going to come from.
 
-For now, inputing data should be possible through a command line tool, but maybe I will also implement a lightweight web api, cause that's what the cool kids do, right?
+For now, inputting data should be possible through a command line tool, but maybe I will also implement a lightweight web api, cause that's what the cool kids do, right?
 
 I want to implement all of this on a relatively low level. Of course I could use an existing database system and essentially write a wrapper around it, but where is the fun in that?
 
 My language of choice is going to be Haskell, since I've already learned some Haskell at uni and it seems to be quite representative of the "functional experience".
 
 ### Where I'm coming from
-While I'm not a first-time Haskell type of beginner, I'm definetely a beginner in Haskell programming and functional programming in general.
+While I'm not a first-time Haskell type of beginner, I'm definitely a beginner in Haskell programming and functional programming in general.
 To be more precise, here are two statements of my current understanding of Haskell:
 * I can understand the type signature of the bind operator `>>=` when I look at it.
 * Five minutes later, I again have no clue what a monad is supposed to be.
@@ -47,7 +47,7 @@ To be more precise, here are two statements of my current understanding of Haske
 ### Personal Goals
 * I want to put some concepts I've heard (like monads) of into practice within a real project.
 * I finally want to get around to actually following through on one of my many ideas for personal projects.
-* I want to "properly" write a piece of software. Even though my goal is not to write a production ready postgress replacement, I would still like to do things as right as I can. The process of creating this thing should be as close to "real world" programming as possible. \
+* I want to "properly" write a piece of software. Even though my goal is not to write a production ready postgresql replacement, I would still like to do things as right as I can. The process of creating this thing should be as close to "real world" programming as possible. \
   Little spoiler: I'm going to go with a "get hands dirty, cleanup later" kind of approach here.
   While I do want to do things properly, I will come back to testing and documentation later and focus on actually writing some code first.
 
@@ -66,7 +66,7 @@ It felt like if I placed the first line of the initial sketch at the wrong posit
 Maybe this is a form of procrastination, maybe it is a form of perfectionism, or maybe both.
 
 When I tried to get into some other project with languages I feel like I'm supposed to know (like Python, Java or to some degree C++ in my case), I would struggle with a similar thing.
-Maybe this could be attributed to some ideas from oop, but I always feel like unless I find the perfect representation, class hierarchy, uml diagram or whatever right away, the project was going to end in an utter mess.
+Maybe this could be attributed to some ideas from oop, but I always feel like unless I find the perfect representation, class hierarchy, UML diagram or whatever right away, the project was going to end in an utter mess.
 
 With Haskell, it seems I don't suffer from that. Maybe it's because I don't feel like I'm supposed to know what I'm doing in the first place.
 
@@ -81,7 +81,7 @@ data DataPoint = DataPoint { value :: MetricValue, time :: UTCTime }
 One thing I'd like to point out here is how easily this follows from my rough ideas up in [# The Project](#the-project).
 In oop languages this is already the point where I would maybe be wasting a lot of time thinking about class hierarchies and how to encapsulate this data properly but in Haskell I feel like I can just type down whatever comes to mind (at least for now).
 
-The coice of the proper datatype for timestamps is apparently not trivial, according to [this atricle](https://wiki.haskell.org/Time), but I decided to not worry too much about it for now and just pick `UTCTime` here as I think think it would not be too hard to change this in the future if I ever felt like I need to.
+The choice of the proper datatype for timestamps is apparently not trivial, according to [this article](https://wiki.haskell.org/Time), but I decided to not worry too much about it for now and just pick `UTCTime` here as I think think it would not be too hard to change this in the future if I ever felt like I need to.
 
 Now to actually store data, we of course need some kind of representation of "state".
 To get started, I first want to store everything in memory and then tackle the hard part of serializing data, writing it to, and reading it from disk later on.
@@ -93,7 +93,7 @@ data DBState = DBState
   , values :: Map MetricName [DataPoint]
   }
 ```
-Note that `Data.Map`, which implements a Hashmap, is imported as `Map` here. If that's considered bad practice, I apologise.
+Note that `Data.Map`, which implements a Hashmap, is imported as `Map` here. If that's considered bad practice, I apologize.
 
 One thing to note here, is that these six lines of code are already enough to represent some kind of _insane_ state.
 Lets say we have
@@ -109,7 +109,7 @@ This state is legal w.r.t. our defined Haskell types, but it is a state that doe
 
 Maybe there exists some kind of Haskell magic to prevent such states just through the type system, but if so, I am not aware of it (yet).
 
-From what I've heard, the `Either` type is a decent way of encapsulating potentially erronous states, so I elect to use that to differenciate between sane and insane states.
+From what I've heard, the `Either` type is a decent way of encapsulating potentially erroneous states, so I elect to use that to differentiate between sane and insane states.
 
 I had gemini create some sensible Error types for me which look like this:
 ``` Haskell
@@ -127,7 +127,7 @@ Using `Either` and `State` gives raise to the following monad stack (at least I 
 ``` Haskell
 type DBMonad = StateT DBState (Either DBError)
 ```
-I'm using the `mtl` package here to stack these moands, though I have to say I'm not sure if this could also be achieved with `transformers`.
+I'm using the `mtl` package here to stack these monads, though I have to say I'm not sure if this could also be achieved with `transformers`.
 I might come back to this question at some point, to get a deeper understanding of monads and the workings of their stacking ^^.
 
 What I do believe to know is that this scenario (state and errors) is one of the use cases of monads, so I'm just trying to use them and see where that's going to lead me :)
@@ -162,7 +162,7 @@ In addition to `addDataPoint`, there are also two other functions which I will n
 We want to support user interaction. For now through a little cli tool.
 Since state only lives in memory until we do proper databasing, I decided to create a little repl for this.
 
-This turned out a bit challanging for me and after some attempts with using a specialized library for cli argument parsing, I decided to use [Parsec](https://hackage.haskell.org/package/parsec) for parsing my repl's input and then translating that into calls to my previously created functions.
+This turned out a bit challenging for me and after some attempts with using a specialized library for cli argument parsing, I decided to use [Parsec](https://hackage.haskell.org/package/parsec) for parsing my repl's input and then translating that into calls to my previously created functions.
 
 Maybe in the future I will go back to this step and do the parsing myself, since I think this might be a nice learning challenge.
 
@@ -183,7 +183,7 @@ To represent these two commands, I came up with the following little grammar for
 <cmd> ::= metric <mcmd> | value <vcmd>
 ```
 I hope it's clear how this grammar can be used to build our two commands, even though it probably can not hold up to any standards of formal correctness.
-Our enum type should be defineable like `metric add "colors" enum ["red", "green", "blue"]`, that's what the weird pseudo-regex for `<type>` is supposed to encode.
+Our enum type should be definable like `metric add "colors" enum ["red", "green", "blue"]`, that's what the weird pseudo-regex for `<type>` is supposed to encode.
 
 Of course I also tried to design this little grammar in a way such that it could easily be extended in the future.
 
@@ -223,14 +223,14 @@ Coming from imperative programming, this function does look quite complex to me 
 There are no `if`s here, no `else if`s, no "_darn it, in this language it's `elif` not `else if`_"'s here, which I feel like matches the more "stateless" way one would think about a grammar like the one above.
 
 Remember what I said earlier about _monadic_ parser combinators being overkill for this project? Well `parseType` is the one parsing function in my project that actually uses the bind operator (hidden in do notation). All other parsing functions only use `>>`. \
-So maybe I was wrong earlier? Or maybe I'm wrong for using monad stuff when it's not neccessary and this could be done in a purely applicative style? \
+So maybe I was wrong earlier? Or maybe I'm wrong for using monad stuff when it's not necessary and this could be done in a purely applicative style? \
 Well maybe at some point I'll be able to tell ^^.
 
 ## Run cabal, run!
 Going from the AST we've now parsed to calling the functions that modify our state is what I will refer to as _monkey pattern matching_ where we can just give a decently trained ape the type signature of our function and the monkey will then do the pattern matching for us.
 One might also argue that instead of apes we could use llms for such tasks.
 
-Since my cognitive ability is essentially equivalent to one of those "reasoning model" thingys being used on top of a monkey's brain for token prediction, I decided to implement functions like these myself:
+Since my cognitive ability is essentially equivalent to one of those "reasoning model" thingies being used on top of a monkey's brain for token prediction, I decided to implement functions like these myself:
 ``` Haskell
 runParserType :: Type -> MetricType
 runParserType Parser.TInt = Core.TInt
