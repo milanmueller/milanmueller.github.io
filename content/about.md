@@ -14,6 +14,12 @@ On this website I write about personal interest (which mostly concern computers 
 
 I really like brackets, in case you couldn't already tell.
 
+## Personal
+I exclusively listen to music from one of these three genres:
+* Progressive Metal
+* Metalcore
+* K-Pop
+
 ---
 
 The Site is built with [Zola](https://www.getzola.org/), using the [Apollo Theme](https://github.com/not-matthias/apollo), because modern web bad ("_modern_" as in everything after about 2010).

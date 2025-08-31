@@ -1,4 +1,5 @@
 words = [
+    "bytestring",
     "combinators",
     "hackage",
     "llms",

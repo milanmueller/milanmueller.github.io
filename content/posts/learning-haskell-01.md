@@ -1,5 +1,5 @@
 +++
-title = "My Haskell Journey, Chapter 1 - What the hell is a monad?"
+title = "Learning Haskell, Chapter 1 - What the hell is a monad?"
 date = "2025-08-29"
 
 [taxonomies]
@@ -10,7 +10,7 @@ repo_view = true
 comment = true
 +++
 
-# My Haskell Journey, Chapter 1 - What the hell is a monad?
+# Learning Haskell, Chapter 1 - What the hell is a monad?
 _Note: This is not a tutorial, it is some kind of progress report about my personal experience with trying to learn the programming language [Haskell](https://www.haskell.org/)._
 
 _Note: This is a first version of the post without any proofreading. I will go over it again and might do significant amounts of rewriting. Once I'm done, I will remove this second Note._
