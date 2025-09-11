@@ -20,12 +20,12 @@ I exclusively listen to music from one of these three genres:
 * Metalcore
 * K-Pop
 
-List of books I have attempted to read but quit after a few pages
+List of books I have attempted to read but gave up on after a few pages
 * Die Welt als Wille und Vorstellung
 * Also sprach Zarathustra 
 
-List of book I actually read
-* Harry Potter (part 1 to 6)
+List of book I have actually read
+* Harry Potter (part 1 to 6 I think)
 ---
 
 The Site is built with [Zola](https://www.getzola.org/), using the [Apollo Theme](https://github.com/not-matthias/apollo), because modern web bad ("_modern_" as in everything after about 2010).
