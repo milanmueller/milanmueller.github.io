@@ -27,6 +27,7 @@ menu = [
   # { name = "~/projects", url = "/projects", weight = 3 },
   { name = "~/about", url = "/about", weight = 4 }
 ]
+toc = true
 mathjax = true
 mathjax_dollar_inline_enable = true
 

@@ -22,7 +22,10 @@
         inputs.nixpkgs.lib.genAttrs supportedSystems (
           system:
           f {
-            pkgs = import inputs.nixpkgs { inherit system; };
+            pkgs = import inputs.nixpkgs {
+              inherit system;
+              config.allowUnfree = true;
+            };
           }
         );
     in
@@ -36,6 +39,7 @@
             packages = with pkgs; [
               zola
               codebook # for spellchecking
+              claude-code
             ];
 
             # Set any environment variables for your dev shell
