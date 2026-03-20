@@ -17,7 +17,7 @@ $text-1: #6c6f85; // subtext0
   --border-color: var(--bg-2);
 
   --primary-color: #1e66f5; // blue
-  --hover-color: #04a5e5; // sky
+  --hover-color: #{$bg-0}; // same as background for contrast effect
 
   // invert colour on hover for consistency
   .social :hover {

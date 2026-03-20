@@ -17,7 +17,7 @@ $text-1: #a6adc8; // subtext0
   --border-color: var(--bg-2);
 
   --primary-color: #89b4fa; // blue
-  --hover-color: #89dceb; // sky
+  --hover-color: #{$bg-0}; // same as background for contrast effect
 
   .social > img {
     filter: invert(1);
