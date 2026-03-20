@@ -11,7 +11,10 @@ compile_sass = true
 build_search_index = true
 
 [markdown]
-# Syntax highlighting is enabled by default in Zola
+# Syntax highlighting configuration
+[markdown.highlighting]
+light_theme = "catppuccin-latte"
+dark_theme = "catppuccin-mocha"
 
 [extra]
 # Put all your custom variables here
@@ -28,6 +31,7 @@ menu = [
 toc = true
 mathjax = true
 mathjax_dollar_inline_enable = true
+stylesheets = ["custom-fonts.css"]
 
 [search]
 include_title = true
