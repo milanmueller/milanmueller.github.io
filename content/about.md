@@ -6,7 +6,7 @@ path = "about"
 - Name: Milan Valentin Markus Boris Müller [sic], but you are invited to ignore everything past my first name.
 - Age (in years): $
   y - 1998 - (
-        \text{if } m > 4 \lor m = 3 \land d \geq 25 \text{ then } 0 \\
+        \text{if } m > 3 \lor m = 3 \land d \geq 25 \text{ then } 0 \\
         \text{else } 1
         )
   $, where $y$ is the current year, $m$ is the current month and $d$ is the current day.
@@ -51,7 +51,7 @@ Software I want to run on some vps or homelab server once I find time for that:
 ## Non-Interests
 Things I am outspokenly uninterested in:
 - Action-inducing assumptions about anything outside the scope of what can be examined by application of the scientific method.
-- Car racing
+- Car racing.
 
 
 [Posts](/posts/) might be in English or German.
