@@ -3,7 +3,7 @@ title = "About Me"
 path = "about"
 +++
 # Basics
-- Name: Milan Valentin Markus Boris Müller [sic], but you are invited to ignore everything past my first name.
+- Name: Milan Valentin Markus Boris Müller [sic], but you are invited to ignore everything past my first given name.
 - Age (in years): $
   y - 1998 - (
         \text{if } m > 3 \lor m = 3 \land d \geq 25 \text{ then } 0 \\
