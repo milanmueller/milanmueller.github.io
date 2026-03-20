@@ -1,0 +1,25 @@
+// Catppuccin Mocha - Dark Theme
+$bg-0: #1e1e2e; // base
+$bg-1: #181825; // mantle
+$bg-2: #11111b; // crust
+
+$text-0: #cdd6f4; // text
+$text-1: #a6adc8; // subtext0
+
+:root.dark {
+  --text-0: #{$text-0};
+  --text-1: #{$text-1};
+
+  --bg-0: #{$bg-0};
+  --bg-1: #{$bg-1};
+  --bg-2: #{$bg-2};
+
+  --border-color: var(--bg-2);
+
+  --primary-color: #89b4fa; // blue
+  --hover-color: #89dceb; // sky
+
+  .social > img {
+    filter: invert(1);
+  }
+}

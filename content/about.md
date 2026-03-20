@@ -11,5 +11,5 @@ On this website I write about personal interest (which mostly concern computers 
 
 [Posts](/posts/) might be in English or German.
 
-The Site is built with [Zola](https://www.getzola.org/), using the [Apollo Theme](https://github.com/not-matthias/apollo), because modern web bad ("_modern_" as in everything after about 2010).
+The Site is built with [Zola](https://www.getzola.org/), using the [Apollo Theme](https://github.com/not-matthias/apollo).
 The source is available on [Github](https://github.com/milanmueller/milanmueller.github.io).

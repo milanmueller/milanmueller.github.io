@@ -1,0 +1,26 @@
+// Catppuccin Latte - Light Theme
+$bg-0: #eff1f5; // base
+$bg-1: #e6e9ef; // mantle
+$bg-2: #dce0e8; // crust
+
+$text-0: #4c4f69; // text
+$text-1: #6c6f85; // subtext0
+
+:root.light {
+  --text-0: #{$text-0};
+  --text-1: #{$text-1};
+
+  --bg-0: #{$bg-0};
+  --bg-1: #{$bg-1};
+  --bg-2: #{$bg-2};
+
+  --border-color: var(--bg-2);
+
+  --primary-color: #1e66f5; // blue
+  --hover-color: #04a5e5; // sky
+
+  // invert colour on hover for consistency
+  .social :hover {
+    filter: invert(1);
+  }
+}
