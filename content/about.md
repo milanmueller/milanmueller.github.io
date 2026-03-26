@@ -32,7 +32,6 @@ Topics I find interesting:
 ## Other Interests
 - Progressive Metal, especially [Animals as Leaders](https://animalsasleaders.org/).
 - [Vemondo](https://www.lidl.de/c/vemondo/a10024870), big fan.
-- Caffeinated beverages.
 
 ## Personal Software Stack
 Software I use on my personal laptop:
