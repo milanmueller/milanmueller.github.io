@@ -15,6 +15,8 @@ path = "about"
 # Education
 - (Anticipated) 2026 M.Sc. Computer Science at [Albert-Ludwigs-Universität Freiburg](https://uni-freiburg.de/).
   - Specialization in [Cyber-Physical Systems](https://www.informatik.uni-freiburg.de/studies/furtherinformation/concentrationCPS?set_language=en), aka. the non-AI track.
+  - The current version of my (heavily work-in-progress) master-thesis can be viewed here: [https://milanmueller.github.io/master-thesis/main.pdf](https://milanmueller.github.io/master-thesis/main.pdf).
+    The thesis is to be completed by end of september 2026.
 - 2023 B.Sc. Computer Science at [Albert-Ludwigs-Universität Freiburg](https://uni-freiburg.de/).
 
 # Work
