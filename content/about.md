@@ -41,7 +41,7 @@ Software I use on my personal laptop:
   My Config is publicly available on [GitHub](https://github.com/milanmueller/nixos-config).
 - Editor: [Helix](https://helix-editor.com/), Although I also like [Zed](https://zed.dev/)'s approach for when more ui is required.
 - Desktop Environment: [Cosmic](https://system76.com/cosmic).
-- Browser: [Firefox](https://www.firefox.com/en-US/), gotta push that 2% market share.
+- Browser: [Firefox](https://www.firefox.com/en-US/).
 
 Software I want to run on some vps or homelab server once I find time for that:
 - [Stalwart](https://stalw.art/) mail server, [JMAP](https://en.wikipedia.org/wiki/JSON_Meta_Application_Protocol) sounds like a cool idea.
