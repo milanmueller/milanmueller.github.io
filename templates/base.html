@@ -27,6 +27,55 @@
 
             {% include "partials/footer.html" %}
         </div>
+        <script>
+            // Wrap the content under each # and ## heading in a div so CSS can
+            // draw indent guides next to it, up to the next heading of the same
+            // or a higher level. ## sections nest inside their # section.
+            // Clicking a heading collapses/expands its section.
+            [1, 2].forEach(function (level) {
+                var sel = level === 1 ? "section.body > h1" : ".h1-section > h2, section.body > h2";
+                document.querySelectorAll(sel).forEach(function (h) {
+                    var wrap = document.createElement("div");
+                    wrap.className = "h" + level + "-section";
+                    var next;
+                    // a heading of the same or higher level ends the section
+                    var ends = function (el) { return /^H[1-6]$/.test(el.tagName) && +el.tagName[1] <= level; };
+                    while ((next = h.nextElementSibling) && !ends(next)) {
+                        wrap.appendChild(next);
+                    }
+                    if (!wrap.childNodes.length) return;
+                    h.after(wrap);
+
+                    h.classList.add("collapsible");
+                    h.tabIndex = 0;
+                    h.setAttribute("role", "button");
+                    h.setAttribute("aria-expanded", "true");
+                    var toggle = function (open) {
+                        if (typeof open !== "boolean") open = wrap.hidden;
+                        wrap.hidden = !open;
+                        h.setAttribute("aria-expanded", String(open));
+                    };
+                    h.addEventListener("click", function () { toggle(); });
+                    h.addEventListener("keydown", function (e) {
+                        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggle(); }
+                    });
+                    h._toggle = toggle;
+                });
+            });
+
+            // Expand collapsed sections containing the target of a #fragment (e.g. TOC links).
+            function revealHash() {
+                var target = location.hash && document.getElementById(decodeURIComponent(location.hash.slice(1)));
+                for (var el = target; el; el = el.parentElement) {
+                    if (el.hidden && el.previousElementSibling && el.previousElementSibling._toggle) {
+                        el.previousElementSibling._toggle(true);
+                    }
+                }
+                if (target) target.scrollIntoView();
+            }
+            window.addEventListener("hashchange", revealHash);
+            revealHash();
+        </script>
     </body>
 
 </html>

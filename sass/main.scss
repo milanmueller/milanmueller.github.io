@@ -34,6 +34,10 @@ html {
 }
 
 .content {
+  // body is a flex column (sticky footer); auto margins would otherwise
+  // shrink-wrap this to its content, making width vary per page.
+  box-sizing: border-box;
+  width: 100%;
   max-width: 1000px;
   margin: 0 auto;
   padding: 0 24px;
@@ -56,4 +60,45 @@ html {
   html {
     font-size: 18px;
   }
+}
+
+// Indent guide for the content under each top-level heading (see base.html)
+.h1-section,
+.h2-section {
+  border-left: 2px solid var(--border-color);
+  margin-left: 0.4em;
+  padding-left: 1em;
+}
+
+// Sub-heading guide: a second line a few pixels right of the outer one.
+// Offsets are relative to the parent's content edge (outer padding is 1em).
+.h1-section > .h2-section {
+  margin-left: calc(4px - 1em);
+  padding-left: calc(2em - 6px);
+}
+
+// Collapsible headings
+h2 {
+  font-size: 1.05rem;
+}
+
+.collapsible {
+  cursor: pointer;
+  user-select: none;
+
+  &::after {
+    content: "▾";
+    margin-left: 0.5em;
+    color: var(--text-2);
+    font-size: 0.8em;
+  }
+
+  &[aria-expanded="false"]::after {
+    content: "▸";
+  }
+}
+
+.h1-section[hidden],
+.h2-section[hidden] {
+  display: none;
 }

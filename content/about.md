@@ -15,8 +15,7 @@ path = "about"
 # Education
 - (Anticipated) 2026 M.Sc. Computer Science at [Albert-Ludwigs-Universität Freiburg](https://uni-freiburg.de/).
   - Specialization in [Cyber-Physical Systems](https://www.informatik.uni-freiburg.de/studies/furtherinformation/concentrationCPS?set_language=en), aka. the non-AI track.
-  - The current version of my (heavily work-in-progress) master-thesis can be viewed here: [https://milanmueller.github.io/master-thesis/main.pdf](https://milanmueller.github.io/master-thesis/main.pdf).
-    The thesis is to be completed by end of september 2026.
+  - My master thesis is available [here](https://milanmueller.github.io/master-thesis/main.pdf).
 - 2023 B.Sc. Computer Science at [Albert-Ludwigs-Universität Freiburg](https://uni-freiburg.de/).
 
 # Work
@@ -46,13 +45,8 @@ Software I use on my personal laptop:
 Software I want to run on some vps or homelab server once I find time for that:
 - [Stalwart](https://stalw.art/) mail server, [JMAP](https://en.wikipedia.org/wiki/JSON_Meta_Application_Protocol) sounds like a cool idea.
 - [Paperless-ngx](https://docs.paperless-ngx.com/), once I can afford one of these nice little scanners that can process multiple pages at once.
-- Some Matrix server with bridges to all the proprietary mobile apps to keep the dream of a unified messenger alive.
-- Some local LLM, once local hardware for that becomes affordable. I predict that free local models will eventually catch up to proprietary ones, while the later will eventually hit walls and the hype will die.
 
 ## Non-Interests
 Things I am outspokenly uninterested in:
 - Action-inducing assumptions about anything outside the scope of what can be examined by application of the scientific method.
 - Car racing.
-
-
-[Posts](/posts/) might be in English or German.
