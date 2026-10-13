@@ -1,9 +1,10 @@
 +++
-title = "Learning Haskell, Chapter 1 - What the hell is a monad?"
+title = "Learning Hasell, Chapter 1 - What the hell is a monad?"
 date = "2025-08-29"
+draft = true
 
 [taxonomies]
-tags=["programming", "learning", "Haskell"]
+tags=["programming", "learning", "Hasell"]
 
 [extra]
 repo_view = true
