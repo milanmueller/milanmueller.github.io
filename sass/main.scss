@@ -122,3 +122,29 @@ h2 {
 .h2-section[hidden] {
   display: none;
 }
+
+// Footnote definitions: "[1] text ↩" on one line
+.footnote-definition {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5em;
+  margin: 0.4em 0;
+
+  p {
+    margin: 0;
+  }
+
+  .footnote-definition-label {
+    vertical-align: baseline;
+    font-size: inherit;
+    color: var(--text-2);
+
+    &::before {
+      content: "[";
+    }
+
+    &::after {
+      content: "]";
+    }
+  }
+}
