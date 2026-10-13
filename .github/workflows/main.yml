@@ -9,10 +9,21 @@ jobs:
   build:
     name: Publish site
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
     - name: Checkout main
       uses: actions/checkout@v4
-    - name: Build and deploy
-      uses: shalzz/zola-deploy-action@v0.20.0
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Install Zola
+      uses: taiki-e/install-action@v2
+      with:
+        tool: zola@0.22.1
+    - name: Install just
+      uses: extractions/setup-just@v2
+    - name: Build site
+      run: just build
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./public

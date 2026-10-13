@@ -40,6 +40,7 @@
               zola
               codebook # for spellchecking
               claude-code
+              just
             ];
 
             # Set any environment variables for your dev shell
