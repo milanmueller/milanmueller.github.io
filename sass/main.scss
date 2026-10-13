@@ -82,19 +82,39 @@ h2 {
   font-size: 1.05rem;
 }
 
-.collapsible {
+// Shared collapse arrow: sits after the label, rotates when toggled.
+.collapsible,
+.toc-container .toc-title {
   cursor: pointer;
   user-select: none;
 
   &::after {
-    content: "▾";
+    content: "▼";
+    display: inline-block;
     margin-left: 0.5em;
     color: var(--text-2);
-    font-size: 0.8em;
+    font-size: 0.7em;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
   }
+}
 
-  &[aria-expanded="false"]::after {
-    content: "▸";
+.collapsible[aria-expanded="false"]::after,
+.toc-container .toc-title:not(.expanded)::after {
+  transform: rotate(-90deg);
+}
+
+// Undo the theme's leading arrow on the ToC title; it uses the "# " prefix like other headings.
+.toc-container .toc-title {
+  padding-left: 0;
+
+  &::before,
+  &:hover::before,
+  &.expanded::before {
+    content: "# ";
+    position: static;
+    transform: none;
+    transition: none;
   }
 }
 
