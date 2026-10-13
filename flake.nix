@@ -39,7 +39,6 @@
             packages = with pkgs; [
               zola
               codebook # for spellchecking
-              claude-code
               just
             ];
 
@@ -47,7 +46,7 @@
             env = { };
 
             # Add any shell logic you want executed any time the environment is activated
-            shellHook = '''';
+            shellHook = "";
           };
         }
       );

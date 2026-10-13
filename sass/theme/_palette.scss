@@ -1,0 +1,34 @@
+// Palette derived from two seed colors using CSS relative colors (OKLCH).
+// Only the hue (and for accents, chroma) comes from the seeds; lightness is
+// fixed per mode, so contrast stays predictable when a seed is changed.
+//
+//   --primary    links, accents, headings
+//   --secondary  warm accent; its hue also tints the neutral backgrounds/text
+
+// Emit an oklch() relative color as plain CSS, bypassing Sass color parsing.
+@function rel($seed, $l, $c, $h: "h") {
+  @return unquote("oklch(from var(--#{$seed}) #{$l} #{$c} #{$h})");
+}
+
+@mixin palette($l-bg, $l-text, $l-accent, $c-neutral) {
+  // $l-bg: lightness of bg-0, bg-1, bg-2 / $l-text: text-0, text-1, text-2
+  --bg-0: #{rel(secondary, nth($l-bg, 1), $c-neutral)};
+  --bg-1: #{rel(secondary, nth($l-bg, 2), $c-neutral)};
+  --bg-2: #{rel(secondary, nth($l-bg, 3), $c-neutral)};
+
+  --text-0: #{rel(secondary, nth($l-text, 1), $c-neutral)};
+  --text-1: #{rel(secondary, nth($l-text, 2), $c-neutral)};
+  --text-2: #{rel(secondary, nth($l-text, 3), $c-neutral)};
+
+  --border-color: var(--bg-2);
+  --primary-color: #{rel(primary, $l-accent, c)};
+  --hover-color: var(--bg-0);
+
+  // Syntax highlighting accents
+  --syn-keyword: #{rel(secondary, $l-accent, c)};
+  --syn-string: #{rel(primary, $l-accent, c)};
+  --syn-function: #{rel(primary, $l-accent, c, "calc(h + 100)")};
+  --syn-constant: #{rel(secondary, $l-accent, c, "calc(h - 70)")};
+  --syn-type: #{rel(secondary, $l-accent, c, "calc(h + 60)")};
+  --syn-comment: var(--text-2);
+}

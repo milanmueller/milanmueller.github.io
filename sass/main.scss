@@ -11,12 +11,14 @@
 @import "../themes/apollo/sass/parts/_mermaid.scss";
 @import "../themes/apollo/sass/parts/_search.scss";
 
-// Import custom footer styles
+// Import custom footer and syntax highlighting styles
 @import "parts/_footer.scss";
+@import "parts/_syntax.scss";
 
 :root {
-  /* Used for: block comment, hr, ... */
-  --border-color: var(--border-color);
+  /* Seed colors: everything else is derived from these (see theme/_palette.scss) */
+  --primary: #7d4e57;
+  --secondary: #364156;
 
   /* Fonts */
   --text-font: "Jetbrains Mono";

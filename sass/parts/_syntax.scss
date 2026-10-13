@@ -1,0 +1,16 @@
+// Syntax highlighting (Zola `style = "class"`), colored from the palette
+// variables in theme/_palette.scss so it follows the seed colors and mode.
+.z-code {
+  color: var(--text-0);
+}
+
+.z-comment { color: var(--syn-comment); font-style: italic; }
+.z-keyword, .z-storage { color: var(--syn-keyword); }
+.z-string { color: var(--syn-string); }
+.z-entity, .z-support { color: var(--syn-function); }
+.z-constant, .z-number { color: var(--syn-constant); }
+.z-storage.z-type, .z-support.z-type, .z-entity.z-name.z-type { color: var(--syn-type); }
+.z-punctuation, .z-punc { color: var(--text-1); }
+.z-invalid, .z-error { color: var(--syn-keyword); text-decoration: underline; }
+.z-hl { background-color: var(--hightlight-color); }
+.giallo-ln { color: var(--text-2); }

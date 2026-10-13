@@ -1,23 +1,9 @@
-// Gruvbox Hard Light Theme
-$bg-0: #f9f5d7; // hard background
-$bg-1: #ebdbb2; // bg1
-$bg-2: #d5c4a1; // bg2
-
-$text-0: #282828; // fg0
-$text-1: #3c3836; // fg1
+@import "palette";
 
 :root.light {
-  --text-0: #{$text-0};
-  --text-1: #{$text-1};
+  @include palette((0.975, 0.93, 0.87), (0.25, 0.32, 0.5), 0.52, 0.025);
 
-  --bg-0: #{$bg-0};
-  --bg-1: #{$bg-1};
-  --bg-2: #{$bg-2};
-
-  --border-color: var(--bg-2);
-
-  --primary-color: #458588; // blue
-  --hover-color: #{$bg-0}; // same as background for contrast effect
+  --hightlight-color: #{rel(primary, 0.9, 0.05)};
 
   // invert colour on hover for consistency
   .social :hover {

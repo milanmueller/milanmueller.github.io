@@ -1,23 +1,9 @@
-// Gruvbox Hard Dark Theme
-$bg-0: #1d2021; // hard background
-$bg-1: #3c3836; // bg1
-$bg-2: #504945; // bg2
-
-$text-0: #fbf1c7; // fg0
-$text-1: #ebdbb2; // fg1
+@import "palette";
 
 :root.dark {
-  --text-0: #{$text-0};
-  --text-1: #{$text-1};
+  @include palette((0.2, 0.28, 0.36), (0.95, 0.88, 0.7), 0.76, 0.02);
 
-  --bg-0: #{$bg-0};
-  --bg-1: #{$bg-1};
-  --bg-2: #{$bg-2};
-
-  --border-color: var(--bg-2);
-
-  --primary-color: #83a598; // blue
-  --hover-color: #{$bg-0}; // same as background for contrast effect
+  --hightlight-color: #{rel(primary, 0.35, 0.06)};
 
   .social > img {
     filter: invert(1);

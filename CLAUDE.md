@@ -18,18 +18,19 @@ This is a personal website/blog built with [Zola](https://www.getzola.org/), a f
 ## Key Commands
 
 ### Development
+Common commands are defined in the `justfile`:
 ```bash
 # Start local development server with live reload
-zola serve
+just serve
 
 # Build the site (output to public/)
-zola build
+just build
 
 # Check links and validate site without rendering
-zola check
+just check
 
-# Spell check content (requires codebook)
-codebook check
+# Spell check content
+just spell
 ```
 
 ### Nix Environment
@@ -86,6 +87,7 @@ GitHub Actions workflow (`.github/workflows/main.yml`) automatically builds and 
 ## Custom Features
 
 - Theme toggle support (light/dark mode via `theme = "toggle"` in config)
+- Colors are derived from two seed colors (`--primary`, `--secondary` in `sass/main.scss`) via OKLCH relative colors; per-mode lightness lives in `sass/theme/{light,dark}.scss`, the derivation in `sass/theme/_palette.scss`. Syntax highlighting uses class output styled in `sass/parts/_syntax.scss`.
 - MathJax enabled with dollar sign inline math support
 - Table of contents enabled globally
 - Giscus comments integration (per-page via frontmatter)

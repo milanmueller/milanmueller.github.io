@@ -13,8 +13,9 @@ build_search_index = true
 [markdown]
 # Syntax highlighting configuration
 [markdown.highlighting]
-light_theme = "catppuccin-latte"
-dark_theme = "catppuccin-mocha"
+# Class-based output; colors come from sass/parts/_syntax.scss (the named theme is unused)
+style = "class"
+theme = "github-dark"
 
 [extra]
 # Put all your custom variables here
