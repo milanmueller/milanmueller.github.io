@@ -13,9 +13,7 @@ path = "about"
 - Located in Freiburg, Germany.
 
 # Education
-- (Anticipated) 2026 M.Sc. Computer Science at [Albert-Ludwigs-Universität Freiburg](https://uni-freiburg.de/).
-  - Specialization in [Cyber-Physical Systems](https://www.informatik.uni-freiburg.de/studies/furtherinformation/concentrationCPS?set_language=en), aka. the non-AI track.
-  - My master thesis is available [here](https://milanmueller.github.io/master-thesis/main.pdf).
+- (Anticipated) 2026 M.Sc. Computer Science at [Albert-Ludwigs-Universität Freiburg](https://uni-freiburg.de/). My master thesis is available [here](https://milanmueller.github.io/master-thesis/main.pdf).
 - 2023 B.Sc. Computer Science at [Albert-Ludwigs-Universität Freiburg](https://uni-freiburg.de/).
 
 # Work
